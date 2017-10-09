@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hevp</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+<!--Barra de Navegación-->
+	<div class="w3-bar w3-light-grey w3-border w3-top">
+		<a href="#" class="w3-bar-item w3-button w3-border-right w3-hover-teal w3-padding-16" onclick="w3_open()">Me</a>
+	 	<a href="#" class="w3-bar-item w3-button w3-padding-16">Home</a>
+		<div class="w3-dropdown-hover">
+		    <button class="w3-button w3-hover-teal w3-padding-16" style="width: 235.5px">Prácticas</button>
+		    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+		      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+		      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+		      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+		    </div>
+		</div>
+		<a href="#" class="w3-bar-item w3-button w3-hover-teal w3-padding-16" style="width: 235.5px">Link 2</a>
+		<a href="#" class="w3-bar-item w3-button w3-hover-teal w3-right w3-orange w3-padding-16">Link 3</a>
+	</div>
+
+<!--Barra de navegación lateral-->
+	<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="width:25%; display: none; z-index: 5;" id="mySidebar"> 
+		<button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Cerrar &times;</button>
+
+		<img src="avatar1.png" class="w3-image w3-circle" style="height: 150px; display: block; margin: auto; margin-top: 10px; margin-bottom: 10px">
+		<div style="margin: auto; padding: 20px">
+			<h3>Yo</h3>
+			<i class="material-icons" style="margin-right: 5px; vertical-align: middle;">person_outline</i>Héctor Eloy Valero Pérez<br>
+			<i class="material-icons" style="margin-right: 5px; vertical-align: middle;">location_city</i>San Cristóbal de La Laguna, Tenerife<br>
+			<i class="material-icons" style="margin-right: 5px; vertical-align: middle;">school</i>IES Antonio Glez Glez, Bachillerato<br>
+			<i class="material-icons" style="margin-right: 5px; vertical-align: middle;">school</i>IES Pérez Minik, CSFP ASIR<br>
+		</div>
+		<div style="padding: 20px;">
+			<div style="margin: auto;"><i class="material-icons" style="vertical-align: middle; margin-right: 5px;">public</i>Idiomas</div>
+			Español <br> 
+			<div class="w3-light-grey"><div class="w3-blue w3-center w3-round-xlarge" style="height: 24px; width: 100%">100%</div></div>
+			<small>Idioma nativo</small> <br>
+			<br>
+			Inglés <br>
+			<div class="w3-light-grey"><div class="w3-blue w3-center w3-round-xlarge" style="height: 24px; width: 40%">40%</div></div>
+			<small>Actualmente cursando B2.1 en la academia <a href="">LC Idiomas</a></small><br><br>
+			<div style="margin: auto";>
+			<i class="material-icons" style="vertical-align: middle; margin-right: 5px;">grade</i>
+			Relacionado con IT's</div>
+			Illustrator <br>
+			<div class="w3-light-grey"><div class="w3-blue w3-center w3-round-xlarge" style="height: 24px; width: 60%">60%</div></div>
+			<!--Photoshop-->
+			<!--Photography-->
+		</div>
+
+	</div>
+
+<!--JS pra abrir y cerrar la barra lateral con efecto de opacidad-->
+	<script>
+	function w3_open() {
+	    document.getElementById("mySidebar").style.display = "block";
+	    document.getElementById("myOverlay").style.display = "block";
+	}
+	function w3_close() {
+	    document.getElementById("mySidebar").style.display = "none";
+	    document.getElementById("myOverlay").style.display = "none";
+	}
+	</script>
+
+<!-- Overlay -->
+	<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer"></div>
+
+<!--Contenido de la página con Overlay-->
+	<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+
+</body>
+</html>
